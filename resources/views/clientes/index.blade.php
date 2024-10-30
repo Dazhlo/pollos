@@ -34,16 +34,16 @@
                 <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
                     <li>
                         <a href="/admin/inicio" class="text-gray-900 dark:text-white hover:underline"
-                            aria-current="page">INICIO</a>
+                            aria-current="page">Inicio</a>
                     </li>
                     <li>
-                        <a href="/usuario/cliente" class="text-gray-900 dark:text-white hover:underline">CLIENTES</a>
+                        <a href="/usuario/cliente" class="text-gray-900 dark:text-white hover:underline">Menu</a>
                     </li>
                     <li>
-                        <a href="/usuario/platillo" class="text-gray-900 dark:text-white hover:underline">POLLOS</a>
+                        <a href="/usuario/platillo" class="text-gray-900 dark:text-white hover:underline">Mis Pedidos</a>
                     </li>
                     <li>
-                        <a href="/admin/crear" class="text-gray-900 dark:text-white hover:underline">EMPLEADOS</a>
+                        <a href="/admin/crear" class="text-gray-900 dark:text-white hover:underline">Mi carrito</a>
                     </li>
                 </ul>
             </div>

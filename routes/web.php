@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('clientes/index');
 });
+
+
+//vistas solamente para calar 
+route::view('/menu','/menu/menu');
