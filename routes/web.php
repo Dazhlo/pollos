@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('clientes/index');
 });
+
+Route::view('/plantilla','/lantilla/plantilla');
