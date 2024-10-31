@@ -14,6 +14,13 @@ class PlatilloController extends Controller
          return view('/admin/agregarPlatillos');
 
         }
+        public function menuVer()
+        {
+            $Platillo=Platillo::all();
+           return view('/menu/menu')->with('Platillos',$Platillo);
+         
+
+        }
     public function index()
     {
         $Platillos = Platillo::all();
@@ -108,7 +115,10 @@ $Platillo=Platillo::find($id);
 $Platillo-> delete();
 return redirect('/admin/verPlatillos');
 }
-
+public function detalles($id){
+    $Platillo=Platillo::find($id); 
+    return view('/menu/detallesMenu')->with('Platillo',$Platillo);
+}
 
 
 
