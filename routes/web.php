@@ -38,4 +38,5 @@ Route::GET('/admin/borrar/{id}',[PlatilloController::class,'borrar']);
 Route::DELETE('/admin/eliminar/{id}',[PlatilloController::class,'Eliminar']);
 
 
+route::view('/login', '/clientes/login');
 
