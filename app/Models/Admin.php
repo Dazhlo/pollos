@@ -8,9 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\Hash;
-
-class User extends Authenticatable
+class Admin extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
-
+    use  HasFactory, Notifiable;
 }

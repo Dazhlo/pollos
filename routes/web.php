@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\PlatilloController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +27,7 @@ Route::POST('/admin/crear',[PlatilloController::class,'crear']);
 //Ruta para ver los platillso desde administrador 
 Route::GET('/admin/verPlatillos',[PlatilloController::class,'index']);
 //vistas solamente para calar 
+Route::GET('/menu/admin',[AdminAuthController::class,'menuAdmin']);
 //route::view('/menu','/menu/menu');
 Route::GET('/menu',[PlatilloController::class,'menuVer']);
 //vista de pruebas -
@@ -40,5 +43,18 @@ Route::DELETE('/admin/eliminar/{id}',[PlatilloController::class,'Eliminar']);
 //vista de pruebas 
 //Route::view('/menu/detalles','/menu/detallesMenu');
 Route::GET('/menu/detalles/{id}',[PlatilloController::class,'detalles']);
+
+//login de administradores
+Route::GET('/login/Admin',[AdminAuthController::class,'showLoginAdmin'])->name('login');
+//login
+Route::POST('/admin/iniciar',[AdminAuthController::class],'login');
+
+
+//vista de crear
+Route::GET('/admin/crear',[UserController::class,'create']);
+//Funcion de guardar
+Route::POST('/admin/guardar',[UserController::class,'crear']);
+
+Route::POST('/admin/logout',[AdminAuthController::class,'logoutAdmin']);
 
 
