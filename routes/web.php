@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PlatilloController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,12 @@ Route::get('/', function () {
     return view('clientes/index');
 });
 
+//vista para admin crear platillo
+Route::GET('/admin/guardar',[PlatilloController::class,'guardar']);
+//VISTA PARA EL LLAMAR DESDE EL FORM FUNCION CREAR 
+Route::POST('/admin/crear',[PlatilloController::class,'crear']);
 
 //vistas solamente para calar 
 route::view('/menu','/menu/menu');
+//vista de pruebas -
+//route::view('/menu/Admin','/admin/agregarPlatillos');

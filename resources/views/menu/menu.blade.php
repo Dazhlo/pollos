@@ -11,7 +11,7 @@
 
     <section class="py-24">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="font-manrope font-bold text-3xl min-[400px]:text-4xl text-black mb-8 max-lg:text-center">Available Products</h2>
+            <h2 class="font-manrope font-bold text-3xl min-[400px]:text-4xl text-black mb-8 max-lg:text-center">Menu</h2>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <a href="javascript:;" class="max-w-[384px] mx-auto">
                     <div class="w-full max-w-sm aspect-square">
@@ -33,8 +33,8 @@
                             </svg>
                         </button>
                     </div>
-                </a>
-
+                </a> 
+                     
                 <a href="javascript:;" class="max-w-[384px] mx-auto">
                     <div class="w-full max-w-sm aspect-square">
                         <img src="https://pagedone.io/asset/uploads/1701157826.png" alt="cream image" class="w-full h-full rounded-xl object-cover">
