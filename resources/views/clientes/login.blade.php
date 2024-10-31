@@ -28,12 +28,15 @@
     <div class="flex items-center justify-center min-h-screen bg-gray-100">
         <div class="w-full max-w-md px-6 py-8 bg-white shadow-md rounded-lg">
 
-    <form action="" class="">
+    <form action="/cliente/login" class="" method="POST">
+        @csrf
         <div class="relative text-gray-500 focus-within:text-gray-900 mb-6">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none ">
          <img src="http://127.0.0.1:8000/imagenes/user.png" alt="">
         </div>
-        <input type="text" id="default-search" class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="usuario">
+
+        {{-- input user --}}
+        <input type="text" id="username" name="username" class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="usuario">
         </div>
         <div class="relative text-gray-500 focus-within:text-gray-900 mb-2">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none ">
@@ -41,7 +44,9 @@
            <path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z" stroke="" stroke-width="1.5" stroke-linecap="round"></path>
          </svg>
         </div>
-        <input type="text" id="default-search" class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="password">
+
+         {{-- input password --}}
+        <input type="text" id="password" name="password" class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="password">
         </div>
     
         <div class="flex mt-7 mb-5">

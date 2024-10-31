@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClienteAuthController;
 use App\Http\Controllers\PlatilloController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,5 +39,8 @@ Route::GET('/admin/borrar/{id}',[PlatilloController::class,'borrar']);
 Route::DELETE('/admin/eliminar/{id}',[PlatilloController::class,'Eliminar']);
 
 
+//login
 route::view('/login', '/clientes/login');
 
+Route::post('/cliente/login',[ClienteAuthController::class, 'login'] );
+Route::post('/cliente/logout',[ClienteAuthController::class, 'logout'] );   
