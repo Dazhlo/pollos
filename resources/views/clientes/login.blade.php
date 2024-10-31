@@ -35,7 +35,7 @@
          <img src="http://127.0.0.1:8000/imagenes/user.png" alt="">
         </div>
 
-        {{-- input user --}}
+        {{-- input users --}}
         <input type="text" id="username" name="username" class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="usuario">
         </div>
         <div class="relative text-gray-500 focus-within:text-gray-900 mb-2">
@@ -45,7 +45,7 @@
          </svg>
         </div>
 
-         {{-- input password --}}
+         {{-- input passwords --}}
         <input type="text" id="password" name="password" class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="password">
         </div>
     
