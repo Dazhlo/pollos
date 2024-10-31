@@ -27,4 +27,15 @@ Route::GET('/admin/verPlatillos',[PlatilloController::class,'index']);
 //vistas solamente para calar 
 route::view('/menu','/menu/menu');
 //vista de pruebas -
-//route::view('/menu/Admin','/admin/agregarPlatillos');
+//route::view('/admin/adminEditar','/admin/adminEditar');
+//administradores editar vista
+Route::GET('/admin/editar/{id}', [PlatilloController::class, 'editar']);
+//menu
+Route::PUT('/admin/update/{id}', [PlatilloController::class, 'update']);
+//Eliminar VISTA 
+Route::GET('/admin/borrar/{id}',[PlatilloController::class,'borrar']);
+//FUNCION DE ELIMINAR
+Route::DELETE('/admin/eliminar/{id}',[PlatilloController::class,'Eliminar']);
+
+
+

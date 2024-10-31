@@ -43,7 +43,7 @@
         @foreach ($Platillos as $item)
         <tr>   
               <td class="px-8 py-2">
-                  {{$item ->id_platillo}}
+                  {{$item ->id}}
               </td>
               <td class="px-8 py-2">
                 {{$item ->nombre_platillo}}
@@ -62,10 +62,10 @@
 " alt="{{$item ->imagen}}
 " width="150px">          </td>
               <td class="px-8 py-2">
-                <a href="/admin/editar{{$item ->id_platillo}}">Editar </a>
+                <a href="/admin/editar/{{$item ->id}}">Editar </a>
               </td>
               <td class="px-8 py-2">
-                <a href="/admin/borrar/{{$item ->id_platillo}}">Eliminar </a>
+                <a href="/admin/borrar/{{$item ->id}}">Eliminar </a>
              </td>
             </tr>
              

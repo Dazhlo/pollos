@@ -35,7 +35,7 @@ class PlatilloController extends Controller
             if($request->hasFile('platillo_imagen'))
             {
                 $img = $request->file('platillo_imagen');
-                $nuevo = 'cliente_1_' . $Platillo->id . '.' . $img->extension();
+                $nuevo = 'Platillo_1_' . $Platillo->id . '.' . $img->extension();
                 $ruta = $img->storeAs('Platillo/clientes', $nuevo, 'public');
                 $ruta = 'storage/' . $ruta;
                 $Platillo->imagen = asset($ruta);
@@ -54,34 +54,60 @@ class PlatilloController extends Controller
 
     }
 //LLamar a la vista y enviar el id 
-public function editar($id_platillo)
+public function editar($id)
 {
-    $Platillo = Platillo::findOrFail($id_platillo);
-    return view('/admin/editar')->with('Platillo',$Platillo);
+
+    $Platillo = Platillo::find($id);
+    if (!$Platillo) {
+        
+        return redirect()->back()->with('error', 'Platillo no encontrado');
+    }
+    return view('/admin/adminEditar')->with('Platillo', $Platillo);
 }
+
 
     //funcion de actualizar
 
-public function update(Request $request)
+public function update(Request $request,$id)
 {
-    $Platillo = Platillo::all();
-    $Platillo = Platillo::find();
+    //$Platillo = Platillo::all();
+    $Platillo = Platillo::find($id);
    $Platillo->nombre_platillo=$request->nombre;
+   $Platillo->detalle_platillo=$request->detalles;
+   $Platillo->stock=$request->stock;
+   $Platillo->precio_unitario=$request->precio;
+   $Platillo->platillo_imagen =  $request ->imagen1;
+   if ($request->hasFile('platillo_imagen')) {
+    $img = $request->file('platillo_imagen');
+    $nuevo = 'Platillo_1_' . $Platillo->id . '.' . $img->extension();
+    $ruta = $img->storeAs('Platillo/clientes', $nuevo, 'public');
+    $ruta='storage/'.$ruta;
+    $Platillo->imagen = asset($ruta);
+ }
 
-
-
-
+ $Platillo->save();
+ return  redirect('/admin/verPlatillos');
 }
           
    public function mostrar($id)
    {
-    $Platillo = Platillo::all();
+   // $Platillo = Platillo::all();
     $Platillo = Platillo::find($id);
     return view('');
 
    }
-
-
+public function borrar($id)
+{
+  // $Platillo=Platillo::all($id);
+   $Platillo=Platillo::find($id);
+   return view('/admin/adminEliminar')->with('Platillo',$Platillo);
+}
+public function Eliminar($id)
+{
+$Platillo=Platillo::find($id);
+$Platillo-> delete();
+return redirect('/admin/verPlatillos');
+}
 
 
 

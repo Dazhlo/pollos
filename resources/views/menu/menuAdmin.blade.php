@@ -37,13 +37,13 @@
                             aria-current="page">Inicio</a>
                     </li>
                     <li>
-                        <a href="/usuario/cliente" class="text-gray-900 dark:text-white hover:underline">Agregar platillos</a>
+                        <a href="/admin/guardar" class="text-gray-900 dark:text-white hover:underline">Agregar platillos</a>
                     </li>
                     <li>
-                        <a href="/usuario/platillo" class="text-gray-900 dark:text-white hover:underline">Eliminar platillos</a>
+                        <a href="/admin/verPlatillos" class="text-gray-900 dark:text-white hover:underline">Ver Platillos</a>
                     </li>
                     <li>
-                        <a href="/admin/crear" class="text-gray-900 dark:text-white hover:underline">Editar platillos</a>
+                        <a href="/admin/crear" class="text-gray-900 dark:text-white hover:underline">Agregar administradores</a>
                     </li>
                 </ul>
             </div>
