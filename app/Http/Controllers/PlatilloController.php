@@ -53,6 +53,25 @@ class PlatilloController extends Controller
 
 
     }
+//LLamar a la vista y enviar el id 
+public function editar($id_platillo)
+{
+    $Platillo = Platillo::findOrFail($id_platillo);
+    return view('/admin/editar')->with('Platillo',$Platillo);
+}
+
+    //funcion de actualizar
+
+public function update(Request $request)
+{
+    $Platillo = Platillo::all();
+    $Platillo = Platillo::find();
+   $Platillo->nombre_platillo=$request->nombre;
+
+
+
+
+}
           
    public function mostrar($id)
    {

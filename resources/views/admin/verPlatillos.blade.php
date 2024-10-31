@@ -62,10 +62,10 @@
 " alt="{{$item ->imagen}}
 " width="150px">          </td>
               <td class="px-8 py-2">
-                <a href="/cliente/editar/{{$item ->id_platillo}}">Editar </a>
+                <a href="/admin/editar{{$item ->id_platillo}}">Editar </a>
               </td>
               <td class="px-8 py-2">
-                <a href="/cliente/borrar/{{$item ->id_platillo}}">Eliminar </a>
+                <a href="/admin/borrar/{{$item ->id_platillo}}">Eliminar </a>
              </td>
             </tr>
              
