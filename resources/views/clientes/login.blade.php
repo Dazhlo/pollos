@@ -51,16 +51,25 @@
                     </div>
 
                     {{-- input passwords --}}
-                    <input type="text" id="password" name="password" class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="password">
+                    <input type="password" id="password" name="password" class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="password">
                 </div>
 
                 <div class="flex mt-7 mb-5">
                     <button class="w-full h-9 bg-indigo-600 hover:bg-indigo-900 transition-all duration-700 rounded-full shadow-xs text-white text-base font-semibold leading-6">LOGIN</button>
                 </div>
+            </form>
+            <form action="/cliente/crear" method="GET">
                 <div class="flex-1 border-b border-gray-200"></div>
                 <div class="flex mt-7 mb-5">
-                    <button class="w-full h-8 bg-indigo-400 hover:bg-indigo-900 transition-all duration-700 rounded-full shadow-xs text-white text-base font-semibold leading-6">REGISTRARSE</button>
+                    
+                        <button type="submit"
+                            class="w-full h-8 bg-indigo-400 hover:bg-indigo-900 transition-all duration-700 rounded-full shadow-xs text-white text-base font-semibold leading-6">
+                            REGISTRARSE
+                        </button>
+                
+                
                 </div>
+            </form>
 
                 <div class="flex w-full items-center space-x-4 mt-10 mb-10">
                     <div class="flex-1 border-b border-gray-200"></div>
@@ -73,7 +82,7 @@
                         <img src="http://127.0.0.1:8000/imagenes/google.png" alt="Google Logo" class="w-full h-full rounded-full"> 
                     </a>
                 </div>
-            </form>
+          
 
         </div>
     </div>

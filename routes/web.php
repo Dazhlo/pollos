@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ClienteAuthController;
+
+use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\PlatilloController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,7 +28,7 @@ Route::POST('/admin/crear',[PlatilloController::class,'crear']);
 //Ruta para ver los platillso desde administrador 
 Route::GET('/admin/verPlatillos',[PlatilloController::class,'index']);
 //vistas solamente para calar 
-route::view('/menu','/menu/menu');
+
 //vista de pruebas -
 //route::view('/admin/adminEditar','/admin/adminEditar');
 //administradores editar vista
@@ -40,8 +42,25 @@ Route::DELETE('/admin/eliminar/{id}',[PlatilloController::class,'Eliminar']);
 
 
 //login
-route::view('/login', '/clientes/login');
-route::view('/registrar', '/clientes/registrarClientes');
+//route::view('/login', '/clientes/login');
+//route::view('/registrar', '/clientes/registrarClientes');
+route::get('cliente/crear',[ClienteController::class,'create']);
 
-Route::post('/cliente/login',[ClienteAuthController::class, 'login'] );
+route::post('/cliente/guardar',[ClienteController::class,'store']);
+
+Route::get('cliente/menu', [ClienteController::class,'index' ]);
+
+
+route::get('cliente/login', [ClienteAuthController::class,'showForm'])->name('login');
+Route::post('/cliente/login',[ClienteAuthController::class, 'login'] ) ;
 Route::post('/cliente/logout',[ClienteAuthController::class, 'logout'] );   
+
+
+
+//rutas que solo puede acceder el usuario 
+
+Route::middleware(['auth:cliente'])->group(function(){
+    route::view('/menu','/menu/menu');
+    route::view('/carrito','/clientes/Carrito');
+});
+

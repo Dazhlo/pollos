@@ -34,7 +34,9 @@
     </ul>
     <div class="flex items-center justify-center min-h-screen bg-white">
         <div class="w-full max-w-md px-6 py-8 bg-white shadow-md rounded-lg">
-            <form action="">
+            {{-- Aqui empiez el form --}}
+            <form action="/cliente/guardar" method="POST">
+                @csrf
                 <div class="relative mb-6">
                     <label class="flex items-center mb-2 text-gray-600 text-sm font-medium">Usuario</label>
                     <div class="relative text-gray-500 focus-within:text-gray-900 mb-6">
@@ -43,7 +45,9 @@
                                 <path d="M20 21V20.1429C20 19.0805 20 18.5493 19.8997 18.1099C19.5578 16.6119 18.3881 15.4422 16.8901 15.1003C16.4507 15 15.9195 15 14.8571 15H10C8.13623 15 7.20435 15 6.46927 15.3045C5.48915 15.7105 4.71046 16.4892 4.30448 17.4693C4 18.2044 4 19.1362 4 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke-width="1.6" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <input type="text" id="user" name="user" maxlength="255" required
+
+                        {{--input user --}}
+                        <input type="text" id="username" name="username" maxlength="255" minlength="5" required
                          class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="Enter Name">
                     </div>
                 </div>
@@ -56,7 +60,9 @@
                                 <path d="M20 21V20.1429C20 19.0805 20 18.5493 19.8997 18.1099C19.5578 16.6119 18.3881 15.4422 16.8901 15.1003C16.4507 15 15.9195 15 14.8571 15H10C8.13623 15 7.20435 15 6.46927 15.3045C5.48915 15.7105 4.71046 16.4892 4.30448 17.4693C4 18.2044 4 19.1362 4 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke-width="1.6" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <input type="text" class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="Enter Name">
+                           {{--input nombre--}}
+                        <input type="text" id="nombre" name="nombre" maxlength="255" minlength="3" required
+                         class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="Enter Name">
                     </div>
                 </div>
 
@@ -68,7 +74,9 @@
                                 <path d="M20 21V20.1429C20 19.0805 20 18.5493 19.8997 18.1099C19.5578 16.6119 18.3881 15.4422 16.8901 15.1003C16.4507 15 15.9195 15 14.8571 15H10C8.13623 15 7.20435 15 6.46927 15.3045C5.48915 15.7105 4.71046 16.4892 4.30448 17.4693C4 18.2044 4 19.1362 4 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke-width="1.6" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <input type="text" class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="Enter Name">
+                          {{--input apellido--}}
+                        <input type="text" id="apellidos" name="apellidos" minlength="3" maxlength="255" required
+                         class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="Enter Name">
                     </div>
                 </div>
 
@@ -80,7 +88,10 @@
                                 <path d="M20 21V20.1429C20 19.0805 20 18.5493 19.8997 18.1099C19.5578 16.6119 18.3881 15.4422 16.8901 15.1003C16.4507 15 15.9195 15 14.8571 15H10C8.13623 15 7.20435 15 6.46927 15.3045C5.48915 15.7105 4.71046 16.4892 4.30448 17.4693C4 18.2044 4 19.1362 4 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke-width="1.6" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <input type="text" class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="Enter Name">
+
+                        {{--input correo--}}
+                        <input type="email"  id="email" name="email" maxlength="255" minlength="7" required
+                         class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="Enter Name">
                     </div>
                 </div>
 
@@ -92,7 +103,10 @@
                                 <path d="M20 21V20.1429C20 19.0805 20 18.5493 19.8997 18.1099C19.5578 16.6119 18.3881 15.4422 16.8901 15.1003C16.4507 15 15.9195 15 14.8571 15H10C8.13623 15 7.20435 15 6.46927 15.3045C5.48915 15.7105 4.71046 16.4892 4.30448 17.4693C4 18.2044 4 19.1362 4 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke-width="1.6" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <input type="text" class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="Enter Name">
+                        {{--input password--}}
+
+                        <input type="password" name="password" id="password"  minlength="7" required
+                        class="block w-full h-11 pr-5 pl-12 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="Enter Name">
                     </div>
                 </div>
 
@@ -111,7 +125,10 @@
                         <h4 class="text-center text-gray-900 text-sm font-medium leading-snug">Drag and Drop your file here or</h4>
                         <div class="flex items-center justify-center">
                         <label>
-                          <input type="file" hidden />
+
+                              {{--input file image--}}
+                          <input type="file" id="imagen" name="imagen" accept="image/*" required
+                           hidden />
                           <div class="flex w-28 h-9 px-2 flex-col bg-indigo-600 rounded-full shadow text-white text-xs font-semibold leading-4 items-center justify-center cursor-pointer focus:outline-none">Choose File</div>
                         </label>
                         </div>
@@ -123,7 +140,8 @@
                
 
                 <div class="flex items-center justify-center">
-                    <button class="w-52 h-12 shadow-sm rounded-full bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7">Crear cuenta</button>
+                    <button type="submit"  id="submit" value="registrar"
+                    class="w-52 h-12 shadow-sm rounded-full bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 text-white text-base font-semibold leading-7">Crear cuenta</button>
                 </div>
             </form>
         </div>

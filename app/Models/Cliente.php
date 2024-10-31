@@ -10,5 +10,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cliente extends Authenticable
 {
-    use HasFactory;
+    use HasApiTokens, HasFactory, Notifiable;
 }

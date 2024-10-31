@@ -18,7 +18,7 @@
                 <img src="https://i.pinimg.com/236x/80/c1/5c/80c15c4ba3f3cbb23fad8c02454157b2.jpg" class="h-8" alt="Flowbite Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Pollos locos</span>
             </a>
-            <form action="/admin/logout" method="POST">
+            <form action="/cliente/logout" method="POST">
                 @csrf
                 <button type="submit"
                 class="text-sm text-blue-600 dar:text-blue-500 hover:underline"
