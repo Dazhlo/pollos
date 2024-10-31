@@ -22,7 +22,7 @@
                 
                 <a href="/menu/detalles/{{$item->id}}" class="max-w-[384px] mx-auto">
                     <div class="w-full max-w-sm aspect-square">
-                        <img src="https://pagedone.io/asset/uploads/1701157806.png" alt="cream image" class="w-full h-full rounded-xl object-cover">
+                        <img src="{{$item->platillo_imagen}}" alt="cream image" class="w-full h-full rounded-xl object-cover">
                     </div>
                     <div class="mt-5 flex items-center justify-between">
                         <div class="">

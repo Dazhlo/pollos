@@ -16,7 +16,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mx-auto max-md:px-2 ">
                 <div class="img">
                     <div class="img-box h-full max-lg:mx-auto ">
-                        <img src="https://pagedone.io/asset/uploads/1700471600.png" alt="Yellow Tropical Printed Shirt image"
+                        <img src="{{$Platillo->platillo_imagen}}" alt="Yellow Tropical Printed Shirt image"
                             class="max-lg:mx-auto lg:ml-auto h-full object-cover">
                     </div>
                 </div>

@@ -55,11 +55,11 @@
                 {{$item ->stock}}
               </td>
               <td class="px-10 py-2">
+
                 {{$item ->precio_unitario}}
               </td>
             <td class="px-8 py-2">
-             <img src="{{$item ->imagen}}
-" alt="{{$item ->imagen}}
+             <img src="{{$item->platillo_imagen}}
 " width="150px">          </td>
               <td class="px-8 py-2">
                 <a href="/admin/editar/{{$item ->id}}">Editar </a>
