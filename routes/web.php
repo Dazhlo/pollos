@@ -41,6 +41,7 @@ Route::DELETE('/admin/eliminar/{id}',[PlatilloController::class,'Eliminar']);
 
 //login
 route::view('/login', '/clientes/login');
+route::view('/registrar', '/clientes/registrarClientes');
 
 Route::post('/cliente/login',[ClienteAuthController::class, 'login'] );
 Route::post('/cliente/logout',[ClienteAuthController::class, 'logout'] );   
