@@ -14,11 +14,17 @@ class PlatilloController extends Controller
          return view('/admin/agregarPlatillos');
 
         }
+    public function index()
+    {
+        $Platillos = Platillo::all();
+        return view('/admin/verPlatillos')-> with('Platillos',$Platillos);
+    }
+
 
         public function crear(Request $request)
     {
-        //  try
-         // {
+         try
+         {
            $Platillo = new Platillo();
             $Platillo->nombre_platillo= $request->nombre;
             $Platillo->detalle_platillo = $request->detalles;
@@ -38,16 +44,26 @@ class PlatilloController extends Controller
          $Platillo->save();
          return  redirect('/admin/guardar');
 
-        //   }catch(\Exception $e)
-        //  {
-        //      return back()->withErrors([
-        //      'error' => 'Error numero: ' . $e->getMessage(),
-        //     ])->withInput();
-        //  }
+          }catch(\Exception $e)
+         {
+             return back()->withErrors([
+             'error' => 'Error numero: ' . $e->getMessage(),
+            ])->withInput();
+         }
 
 
     }
           
+   public function mostrar($id)
+   {
+    $Platillo = Platillo::all();
+    $Platillo = Platillo::find($id);
+    return view('');
+
+   }
+
+
+
 
 
 

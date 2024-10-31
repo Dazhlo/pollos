@@ -22,7 +22,8 @@ Route::get('/', function () {
 Route::GET('/admin/guardar',[PlatilloController::class,'guardar']);
 //VISTA PARA EL LLAMAR DESDE EL FORM FUNCION CREAR 
 Route::POST('/admin/crear',[PlatilloController::class,'crear']);
-
+//Ruta para ver los platillso desde administrador 
+Route::GET('/admin/verPlatillos',[PlatilloController::class,'index']);
 //vistas solamente para calar 
 route::view('/menu','/menu/menu');
 //vista de pruebas -
