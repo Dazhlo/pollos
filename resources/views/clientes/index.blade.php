@@ -37,10 +37,10 @@
                             aria-current="page">Inicio</a>
                     </li>
                     <li>
-                        <a href="/usuario/cliente" class="text-gray-900 dark:text-white hover:underline">Menu</a>
+                        <a href="/menu" class="text-gray-900 dark:text-white hover:underline">Menu</a>
                     </li>
                     <li>
-                        <a href="/usuario/platillo" class="text-gray-900 dark:text-white hover:underline">Mis Pedidos</a>
+                        <a href="" class="text-gray-900 dark:text-white hover:underline">Mis Pedidos</a>
                     </li>
                     <li>
                         <a href="/admin/crear" class="text-gray-900 dark:text-white hover:underline">Mi carrito</a>

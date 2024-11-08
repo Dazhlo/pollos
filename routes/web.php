@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AdminAuthController;
+use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\PlatilloController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -58,3 +60,10 @@ Route::POST('/admin/guardar',[UserController::class,'crear']);
 Route::POST('/admin/logout',[AdminAuthController::class,'logoutAdmin']);
 
 
+
+
+//Vistas para el carrito 
+
+
+Route::GET('/Carrito/productos', [CarritoController::class, 'productosCarrito']);
+Route::POST('/Carrito/agregar',[CarritoController::class,'carritoAgregar']);

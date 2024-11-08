@@ -165,18 +165,16 @@
                                 </svg>
 
                             </button>
-                            <form action="">
+                            <form action="/Carrito/agregar" method="POST">
                                 @csrf
                                 <input type="hidden" name="id" value="{{ $Platillo->id }}">
                                 <input type="hidden" name="name" value="{{ $Platillo->nombre_platillo }}">
                                 <input type="hidden" name="price" value="{{ $Platillo->precio_unitario }}">
-                                {{-- <input type="hidden" name="image" value="{{ $Platillo->image }}"> --}}
+                                 <input type="hidden" name="image" value="{{ $Platillo->platillo_imagen }}"> 
                                 <input type="hidden" name="quantity" value="1">
+                                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Agregar</button>
                                 <input type="hidden" name="description" value="{{ $Platillo->detalle_platillo }}">
-                            <button type="submit"
-                                class="text-center w-full px-5 py-4 rounded-[100px] bg-indigo-600 flex items-center justify-center font-semibold text-lg text-white shadow-sm transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400">
-                                Agregar al carrito
-                            </button>
+                            
                         </form>
                         </div>
                     </div>

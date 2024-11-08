@@ -171,6 +171,7 @@ return [
         /*
          * Application Service Providers...
          */
+        Darryldecode\Cart\CartServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
@@ -189,7 +190,7 @@ return [
     | the aliases are "lazy" loaded so they don't hinder performance.
     |
     */
-
+'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
     'aliases' => Facade::defaultAliases()->merge([
         // ...
     ])->toArray(),
